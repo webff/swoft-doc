@@ -108,6 +108,7 @@ $data = $request->query();
 $some = $request->query('key', 'default value')
 $data = $request->get();
 $some = $request->get('key','default value');
+$data = $request->getQueryParams(); //array
 ```
 
 ### POST 数据
@@ -281,5 +282,31 @@ if ($request->isPatch()) {
 
 ```php
 $contentType = $request->getContentType();
+```
+```php
+$request->url();
+``` 
+- 获取当前访问路由对应的URL（带get参数）
+
+```php
+$request->fullUrl();
+``` 
+
+- 获取当前访问路由
+
+```php
+$request->getUriPath(); // eg: /test/test
+``` 
+
+- 获取当前访问路由后参数
+
+```php
+$request->getUriQuery();// return string 
+``` 
+
+- 获取支持的语言
+
+```php
+$request->getAcceptLanguages()
 ```
 
