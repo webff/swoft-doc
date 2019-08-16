@@ -283,3 +283,32 @@ if ($request->isPatch()) {
 $contentType = $request->getContentType();
 ```
 
+- 获取当前访问路由对应的URL（不带get参数）
+
+```php
+$request->url();
+``` 
+- 获取当前访问路由对应的URL（带get参数）
+
+```php
+$request->fullUrl();
+``` 
+
+- 获取当前访问路由
+
+```php
+$request->getUriPath(); /test/test
+``` 
+
+- 获取当前访问路由后参数
+
+```php
+$request->getUriQuery();// return string 
+``` 
+
+- 获取支持的语言
+
+```php
+request->getAcceptLanguages()
+```
+
